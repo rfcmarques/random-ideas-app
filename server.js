@@ -1,11 +1,14 @@
+const path = require('path');
 const express = require('express');
 require('dotenv').config();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5000;
 const connectDB = require('./config/db');
 
 connectDB();
 
 const app = express();
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
