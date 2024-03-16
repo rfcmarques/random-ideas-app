@@ -61,7 +61,7 @@ class IdeaList {
               </div>
                 `;
             })
-            .join();
+            .join('');
     }
 }
 
